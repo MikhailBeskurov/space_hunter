@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SpaceHunter/Scenes/TestScene.unity
+    guid: 65123a0754c882543bf6ea0ba35a5399
   m_configObjects: {}
