@@ -1,6 +1,6 @@
 ﻿namespace SpaceHunter.Scripts.Models.Dialog
 {
-    public enum CharactersNames
+    public enum CharactersType
     {
         Me,
         SiDjey

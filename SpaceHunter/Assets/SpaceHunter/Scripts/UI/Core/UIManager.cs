@@ -15,17 +15,15 @@ namespace HoneyWood.Scripts.UI.Core
         public static int BlockingCount = 0;
 
         private Canvas _canvas;
-        private Canvas _worldCanvas;
 
         private List<AbstractScreen> _screens = new List<AbstractScreen>();
 
         private IAssetProvider _assetProvider;
 
-        public UIManager(IAssetProvider assetProvider, Canvas canvas, Canvas worldCanvas)
+        public UIManager(IAssetProvider assetProvider, Canvas canvas)
         {
             _assetProvider = assetProvider;
             _canvas = canvas;
-            _worldCanvas = worldCanvas;
             UIInteractable.Value = true;
         }
 
@@ -110,11 +108,6 @@ namespace HoneyWood.Scripts.UI.Core
         {
             var targetType = typeof(T);
 
-            if (targetType.BaseType == typeof(AbstractWorldScreenModel))
-            {
-                return GetWorldScreen<T>();
-            }
-            
             var createdScreen = _screens.FirstOrDefault(v => v.ModelType.IsAssignableFrom(targetType));
             if (createdScreen != null)
             {
@@ -122,21 +115,6 @@ namespace HoneyWood.Scripts.UI.Core
             }
             var screen = _assetProvider.GetWindow<T>();
             screen = Object.Instantiate(screen, _canvas.transform);
-            _screens.Add(screen);
-            return screen as IScreen<T>;
-        }
-
-        private IScreen<T> GetWorldScreen<T>() where T : IUIModel
-        {
-            var targetType = typeof(T);
-            var createdScreen = _screens.FirstOrDefault(v => v.ModelType.IsAssignableFrom(targetType));
-            if (createdScreen != null)
-            {
-                return createdScreen as IScreen<T>;
-            }
-            var screen = _assetProvider.GetWindow<T>();
-            screen = Object.Instantiate(screen, _worldCanvas.transform);
-            screen.Hide();
             _screens.Add(screen);
             return screen as IScreen<T>;
         }

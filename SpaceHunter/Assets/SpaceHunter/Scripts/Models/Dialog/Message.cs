@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SpaceHunter.Scripts.Modules.Dialog
+namespace SpaceHunter.Scripts.Models.Dialog
 {
     public class Message
     {

@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba2e23370334a36aa7270d15e626beb, type: 3}
   m_Name: Characters
   m_EditorClassIdentifier: 
-  _characters: []
+  _characters:
+  - _charactersType: 1
+    _avatar: {fileID: 21300000, guid: 1d991d7286e626d4681c97b5a65c1f78, type: 3}
+    _name: "<color=#FFFF>\u0421\u0438 \u0414\u0436\u0435\u0439</color>"
+  - _charactersType: 0
+    _avatar: {fileID: 21300000, guid: cd55b96e5888e3f43a4f3bbebfd50aec, type: 3}
+    _name: "<color=#FFD600>\u0422\u044B</color>"

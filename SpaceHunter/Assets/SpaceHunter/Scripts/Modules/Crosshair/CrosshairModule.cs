@@ -12,14 +12,16 @@ namespace SpaceHunter.Scripts.Modules.Crosshair
         public void DisableInput();
     }
 
-    public class MouseModule : ICrosshairModule, IUpdatable
+    public class CrosshairModule : ICrosshairModule, IUpdatable
     {
         public IReadOnlyReactiveProperty<Vector3> PositionMouse => _positionMouse;
 
         private ReactiveProperty<Vector3> _positionMouse = new ReactiveProperty<Vector3>();
+
+        private float _sensivity = 20f;
         private bool _enableInput = true;
         
-        public MouseModule()
+        public CrosshairModule()
         {
         }
 
@@ -28,7 +30,7 @@ namespace SpaceHunter.Scripts.Modules.Crosshair
             if (_enableInput)
             {
                 Vector3 mousePosition = Mouse.current.position.ReadValue();
-                _positionMouse.Value = new Vector3(mousePosition.x, 0, mousePosition.y) / 20f;
+                _positionMouse.Value = new Vector3(mousePosition.x, 0, mousePosition.y) / _sensivity;
             }
         }
         

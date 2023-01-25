@@ -4,7 +4,7 @@ using UnityEngine;
 namespace SpaceHunter.Scripts.Models.Dialog
 {
     [Serializable]
-    public class Message
+    public class MessageSettings
     {
         public CharactersType Character;
         [TextArea()]

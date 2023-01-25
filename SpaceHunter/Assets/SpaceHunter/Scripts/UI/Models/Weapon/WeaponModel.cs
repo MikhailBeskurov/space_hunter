@@ -1,7 +1,9 @@
-﻿namespace SpaceHunter.Scripts.UI.Models.WeaponModel
+﻿using HoneyWood.Scripts.UI.Core.Model;
+
+namespace SpaceHunter.Scripts.UI.Models.Weapon
 {
-    public class WeaponModel
+    public abstract class WeaponModel : AbstractScreenModel
     {
-        
+
     }
 }

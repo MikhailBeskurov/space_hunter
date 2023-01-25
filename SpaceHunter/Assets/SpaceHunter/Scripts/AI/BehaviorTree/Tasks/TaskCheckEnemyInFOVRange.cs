@@ -4,16 +4,14 @@ using UnityEngine;
 
 namespace AI.BehaviorTree.Tasks
 {
-    public class CheckEnemyInFOVRange : AbstractNode
+    public class TaskCheckEnemyInFOVRange : AbstractNode
     {
-        private int _enemyLayerMask = 1 << 5;
+        private int _enemyLayerMask = 1 << 7;
         private Transform _transform;
         private float _rangeFOV;
-        private Animator _animator;
 
-        public CheckEnemyInFOVRange(Transform transform, Animator animator, float rangeFOV)
+        public TaskCheckEnemyInFOVRange(Transform transform, float rangeFOV)
         {
-            _animator = animator;
             _rangeFOV = rangeFOV;
             _transform = transform;
         }
@@ -28,7 +26,6 @@ namespace AI.BehaviorTree.Tasks
                 if (colliders.Length > 0)
                 {
                     Parent.Parent.SetData("target", colliders[0].transform);
-                    _animator.SetBool("Run", true);
                     State = NodeState.Success;
                     return State;
                 }

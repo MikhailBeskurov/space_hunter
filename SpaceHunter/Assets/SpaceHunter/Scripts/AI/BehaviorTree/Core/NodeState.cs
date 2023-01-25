@@ -1,4 +1,4 @@
-﻿namespace AI.BehaviorTree
+﻿namespace AI.Core.BehaviorTree
 {
     public enum NodeState
     {

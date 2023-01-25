@@ -9,26 +9,11 @@ namespace HoneyWood.Scripts.UI.Core.View
         
         public override void Show()
         {
-            UIManager.UIShown.Value = true;
-            UIManager.BlockingCount++;
             gameObject.SetActive(true);
         }
 
         public override void Hide()
         {
-            if (IsShown)
-            {
-                UIManager.BlockingCount--;
-            }
-            if (UIManager.BlockingCount <= 0)
-            {
-                UIManager.BlockingCount = 0;
-                UIManager.UIShown.Value = false;
-            }
-            else
-            {
-                UIManager.UIShown.Value = true;
-            }
             gameObject.SetActive(false);
         }
     }

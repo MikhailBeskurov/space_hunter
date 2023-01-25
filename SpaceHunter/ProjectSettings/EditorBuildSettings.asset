@@ -4,8 +4,6 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/SpaceHunter/Scenes/TestScene.unity
-    guid: 65123a0754c882543bf6ea0ba35a5399
-  m_configObjects: {}
+  m_Scenes: []
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 1e2c51a149b9259488b6ae7f42918b9d, type: 2}

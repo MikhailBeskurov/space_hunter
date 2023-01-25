@@ -33,22 +33,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "NextWeapon",
-                    "type": "Button",
+                    "name": "ScrollWeapon",
+                    "type": "Value",
                     "id": "e45cb0da-ae56-4d91-bab5-9e891eb54d2b",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "BackWeapon",
-                    "type": "Button",
-                    "id": "afa08081-f660-480e-8104-3ebb6d5f5505",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -132,22 +123,11 @@
                 {
                     "name": "",
                     "id": "a123b613-1b11-452e-8f45-55430abbfe4b",
-                    "path": "<Mouse>/forwardButton",
+                    "path": "<Mouse>/scroll",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "NextWeapon",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "055eb85e-b261-441d-96dc-d3a549a05975",
-                    "path": "<Mouse>/backButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "BackWeapon",
+                    "action": "ScrollWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
