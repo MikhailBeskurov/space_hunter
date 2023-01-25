@@ -15,7 +15,6 @@ using SpaceHunter.Scripts.Modules.Player.Movement;
 using SpaceHunter.Scripts.Modules.Weapon;
 using SpaceHunter.Scripts.ScriptableObjects;
 using SpaceHunter.Scripts.UI.Models.Dialog;
-using SpaceHunter.Scripts.UI.Models.Weapon;
 using SpaceHunter.Scripts.World.Models.Player;
 using UnityEngine;
 using Zenject;
