@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
-using HoneyWood.Scripts.UI.Core.Model;
+using UI.Core.Model;
 
-namespace HoneyWood.Scripts.UI.Core.View
+namespace UI.Core.View
 {
     public abstract class SimpleScreen<TModel> : BaseScreen<TModel> where TModel : IUIModel
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HoneyWood.Scripts.Utils.Random
+namespace Utils.Random
 {
     public class UnityRandom : IRandomProvider
     {

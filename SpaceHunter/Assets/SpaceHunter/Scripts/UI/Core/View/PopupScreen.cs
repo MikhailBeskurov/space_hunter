@@ -1,6 +1,6 @@
-﻿using HoneyWood.Scripts.UI.Core.Model;
+﻿using UI.Core.Model;
 
-namespace HoneyWood.Scripts.UI.Core.View
+namespace UI.Core.View
 {
     public abstract class PopupScreen<TModel> : BaseScreen<TModel> where TModel : IUIModel
     {

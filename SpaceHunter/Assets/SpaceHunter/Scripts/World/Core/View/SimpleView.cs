@@ -1,6 +1,6 @@
-﻿using HoneyWood.Scripts.World.Core.Model;
+﻿using World.Core.Model;
 
-namespace HoneyWood.Scripts.World.Core.View
+namespace World.Core.View
 {
     public abstract class SimpleView<T> : BaseView<T> where T : IViewModel
     {

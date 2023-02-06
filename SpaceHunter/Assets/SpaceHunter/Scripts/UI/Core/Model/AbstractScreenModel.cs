@@ -1,4 +1,4 @@
-﻿namespace HoneyWood.Scripts.UI.Core.Model
+﻿namespace UI.Core.Model
 {
     public abstract class AbstractScreenModel : IUIModel
     {

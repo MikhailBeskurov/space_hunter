@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HoneyWood.Scripts.Utils
+namespace Utils
 {
     public class ObjectPool<T> where T : Component
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HoneyWood.Scripts.ClientServices
+namespace ClientServices
 {
     public interface ISpriteProvider
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using HoneyWood.Scripts.UI.Core.Model;
+using UI.Core.Model;
 using SpaceHunter.Scripts.Models.Dialog;
 using SpaceHunter.Scripts.Modules.Dialog;
 using SpaceHunter.Scripts.UI.Views.DialogScreen;

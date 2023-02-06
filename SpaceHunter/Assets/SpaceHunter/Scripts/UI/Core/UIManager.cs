@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HoneyWood.Scripts.ClientServices;
-using HoneyWood.Scripts.UI.Core.Model;
-using HoneyWood.Scripts.UI.Core.View;
+using ClientServices;
+using UI.Core.Model;
+using UI.Core.View;
 using UniRx;
 using UnityEngine;
 
-namespace HoneyWood.Scripts.UI.Core
+namespace UI.Core
 {
     public class UIManager : IUIManager
     {

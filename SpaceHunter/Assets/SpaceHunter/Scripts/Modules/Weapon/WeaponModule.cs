@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using HoneyWood.Scripts.Utils.Update;
-using HoneyWood.Scripts.World.Core;
+using Utils.Update;
+using World.Core;
 using SpaceHunter.Scripts.Modules.Controls;
 using SpaceHunter.Scripts.Modules.Player;
 using SpaceHunter.Scripts.Modules.Weapon.Weapons;
@@ -42,9 +42,9 @@ namespace SpaceHunter.Scripts.Modules.Weapon
 
         private void Init()
         {
-            _weapons.Add(new WeaponRifle(_bullets._bullet));
-            _weapons.Add(new WeaponPistol(_bullets._bullet));
-            _weapons.Add(new WeaponKnife(_bullets._bullet));
+            _weapons.Add(new WeaponRifle(_bullets.Bullet));
+            _weapons.Add(new WeaponPistol(_bullets.Bullet));
+            _weapons.Add(new WeaponKnife(_bullets.Bullet));
         }
 
         private void Bind()

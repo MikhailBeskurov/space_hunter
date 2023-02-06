@@ -1,7 +1,7 @@
 ﻿using System;
-using HoneyWood.Scripts.World.Core.Model;
+using World.Core.Model;
 
-namespace HoneyWood.Scripts.World.Core.View
+namespace World.Core.View
 {
     public abstract class BaseView<T> : AbstractView, IView<T> where T : IViewModel
     {

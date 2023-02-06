@@ -1,4 +1,4 @@
-﻿namespace HoneyWood.Scripts.World.Core.Model
+﻿namespace World.Core.Model
 {
     public interface IViewModel
     {

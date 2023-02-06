@@ -1,4 +1,4 @@
-﻿using HoneyWood.Scripts.UI.Core.View;
+﻿using UI.Core.View;
 using SpaceHunter.Scripts.UI.Models.Weapon;
 using UnityEngine;
 

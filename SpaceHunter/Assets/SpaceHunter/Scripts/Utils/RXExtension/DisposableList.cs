@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace HoneyWood.Scripts.Utils.RXExtension
+namespace Utils.RXExtension
 {
     public class DisposableList : ICollection<IDisposable>, IDisposable
     {

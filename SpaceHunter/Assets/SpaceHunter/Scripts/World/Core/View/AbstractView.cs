@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace HoneyWood.Scripts.World.Core.View
+namespace World.Core.View
 {
     public abstract class AbstractView : MonoBehaviour, IView
     {

@@ -1,6 +1,6 @@
-﻿using HoneyWood.Scripts.Utils.Update;
-using HoneyWood.Scripts.World.Core;
-using HoneyWood.Scripts.World.Core.Model;
+﻿using Utils.Update;
+using World.Core;
+using World.Core.Model;
 using SpaceHunter.Scripts.Modules.Crosshair;
 using SpaceHunter.Scripts.World.Views.Player;
 using UniRx;

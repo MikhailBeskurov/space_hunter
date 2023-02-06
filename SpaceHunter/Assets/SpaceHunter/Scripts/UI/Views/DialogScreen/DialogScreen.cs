@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HoneyWood.Scripts.UI.Core.View;
+using UI.Core.View;
 using SpaceHunter.Scripts.Models.Dialog;
 using SpaceHunter.Scripts.Modules.Dialog;
 using SpaceHunter.Scripts.UI.Models.Dialog;

@@ -1,10 +1,10 @@
 ﻿using System;
 using DG.Tweening;
 using DG.Tweening.Core;
-using HoneyWood.Scripts.UI.Core.Model;
+using UI.Core.Model;
 using UnityEngine;
 
-namespace HoneyWood.Scripts.UI.Core.View
+namespace UI.Core.View
 {
     public abstract class AnimationScreen<TModel> : BaseScreen<TModel> where TModel : IUIModel
     {

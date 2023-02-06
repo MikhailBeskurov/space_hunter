@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace HoneyWood.Scripts.UI.Core.View
+namespace UI.Core.View
 {
     public abstract class AbstractScreen : MonoBehaviour, IScreen
     {

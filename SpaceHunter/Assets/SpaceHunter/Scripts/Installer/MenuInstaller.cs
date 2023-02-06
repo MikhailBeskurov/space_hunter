@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using HoneyWood.Scripts.ClientServices;
-using HoneyWood.Scripts.UI.Core;
-using HoneyWood.Scripts.Utils.RXExtension;
-using HoneyWood.Scripts.Utils.Update;
-using HoneyWood.Scripts.World.Core;
+using ClientServices;
+using UI.Core;
+using Utils.RXExtension;
+using Utils.Update;
+using World.Core;
 using SpaceHunter.Scripts.Models.Dialog;
 using SpaceHunter.Scripts.Modules.Controls;
 using SpaceHunter.Scripts.Modules.Crosshair;
@@ -35,6 +35,7 @@ namespace SpaceHunter.Scripts.Installer
         private DiContainer _diContainer;
         private GameResourcesManager _gameResourcesManager;
         private AssetProvider _assetProvider;
+        private string[] _groupsName = {"worlds", "screens"};
       
         private UIManager _uiManager;
         private WorldManager _worldManager;
@@ -49,7 +50,7 @@ namespace SpaceHunter.Scripts.Installer
             _diContainer = new DiContainer();
             LoadResources();
         }
-        
+
         private void LoadResources()
         {
             _gameResourcesManager = new GameResourcesManager();
@@ -57,7 +58,7 @@ namespace SpaceHunter.Scripts.Installer
             _assetProvider = new AssetProvider(_gameResourcesManager);
             SpriteProvider.Init(_gameResourcesManager);
 
-            _gameResourcesManager.LoadGroups("", Init);
+            _gameResourcesManager.LoadPrefabsGroups(_groupsName, Init);
         }
         
         private void Update()

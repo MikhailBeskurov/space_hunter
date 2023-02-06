@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HoneyWood.Scripts.ClientServices;
-using HoneyWood.Scripts.World.Core.Model;
-using HoneyWood.Scripts.World.Core.View;
+using ClientServices;
 using UnityEngine;
+using World.Core.Model;
+using World.Core.View;
 
-namespace HoneyWood.Scripts.World.Core
+namespace World.Core
 {
     public class WorldManager : IWorldManager
     {

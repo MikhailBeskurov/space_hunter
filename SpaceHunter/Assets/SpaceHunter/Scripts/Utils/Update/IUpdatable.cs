@@ -1,4 +1,4 @@
-﻿namespace HoneyWood.Scripts.Utils.Update
+﻿namespace Utils.Update
 {
     public interface IUpdatable
     {

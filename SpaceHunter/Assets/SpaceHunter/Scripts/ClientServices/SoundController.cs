@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace HoneyWood.Scripts.ClientServices
+namespace ClientServices
 {
     public enum SfxClip
     {

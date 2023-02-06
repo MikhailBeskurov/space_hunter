@@ -1,10 +1,10 @@
-﻿using HoneyWood.Scripts.UI.Core.Model;
-using HoneyWood.Scripts.UI.Core.View;
-using HoneyWood.Scripts.World.Core.Model;
-using HoneyWood.Scripts.World.Core.View;
+﻿using UI.Core.Model;
+using UI.Core.View;
+using World.Core.Model;
+using World.Core.View;
 using UnityEngine;
 
-namespace HoneyWood.Scripts.ClientServices
+namespace ClientServices
 {
     public interface IAssetProvider
     {

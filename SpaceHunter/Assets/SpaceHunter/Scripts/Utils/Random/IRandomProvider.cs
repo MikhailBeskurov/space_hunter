@@ -1,4 +1,4 @@
-﻿namespace HoneyWood.Scripts.Utils.Random
+﻿namespace Utils.Random
 {
     public interface IRandomProvider
     {

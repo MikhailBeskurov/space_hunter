@@ -1,4 +1,4 @@
-﻿using HoneyWood.Scripts.UI.Core.Model;
+﻿using UI.Core.Model;
 
 namespace SpaceHunter.Scripts.UI.Models.Weapon
 {

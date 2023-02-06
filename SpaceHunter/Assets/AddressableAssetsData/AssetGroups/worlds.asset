@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Worlds
+  m_EditorClassIdentifier: 
+  m_GroupName: Worlds
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 24eccb898f064c64bb76a1927557742a
+  m_SerializeEntries:
+  - m_GUID: 37e780dc7deea6449863fa85a53d54c2
+    m_Address: CrosshairModel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - worlds
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12c62006eaa1aed43a36d6b4a48f36df
+    m_Address: PlayerModel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - worlds
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 4caf8e5abc86a2c4abb81c0cd9f29a89, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8432fb7ea4b2ac4448de0323addbb711, type: 2}
+    - {fileID: 11400000, guid: eb07c07254b98ae4c9bbd9d5da7066b3, type: 2}

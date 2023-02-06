@@ -1,4 +1,4 @@
-﻿using HoneyWood.Scripts.Utils.Update;
+﻿using Utils.Update;
 using UniRx;
 using UnityEngine;
 using UnityEngine.InputSystem;

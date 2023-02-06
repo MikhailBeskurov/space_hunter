@@ -1,5 +1,5 @@
 ﻿
-using HoneyWood.Scripts.World.Core.View;
+using World.Core.View;
 using SpaceHunter.Scripts.World.Models.Player;
 using UniRx;
 using UnityEngine;

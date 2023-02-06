@@ -1,7 +1,7 @@
 ﻿using System;
-using HoneyWood.Scripts.UI.Core.Model;
+using UI.Core.Model;
 
-namespace HoneyWood.Scripts.UI.Core.View
+namespace UI.Core.View
 {
     public abstract class BaseScreen<TModel> : AbstractScreen, IScreen<TModel> where TModel : IUIModel
     {

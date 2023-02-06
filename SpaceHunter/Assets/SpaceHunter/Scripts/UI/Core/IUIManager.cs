@@ -1,7 +1,7 @@
-﻿using HoneyWood.Scripts.UI.Core.Model;
-using HoneyWood.Scripts.UI.Core.View;
+﻿using UI.Core.Model;
+using UI.Core.View;
 
-namespace HoneyWood.Scripts.UI.Core
+namespace UI.Core
 {
     public interface IUIManager
     {

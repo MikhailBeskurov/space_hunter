@@ -7,7 +7,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.U2D;
 using Object = UnityEngine.Object;
 
-namespace HoneyWood.Scripts.ClientServices
+namespace ClientServices
 {
     public interface IGameResourcesManager
     {
@@ -28,87 +28,61 @@ namespace HoneyWood.Scripts.ClientServices
 
         private List<SpriteAtlas> _atlases = new List<SpriteAtlas>();
 
-        public async void LoadGroups(string groupName, Action afterLoading)
+        public async void LoadPrefabsGroups(string[] groupsName, Action afterLoading)
         {
-            var atlasesArray = new string[]
+            foreach (var groupName in groupsName)
             {
-                "Farm",
-                "Store",
-                "Match3",
-                "Emoji"
-            };
+                var loadPrefabs = Addressables.LoadAssetsAsync<GameObject>(groupName.ToLower(), null);
+                await loadPrefabs.Task;
 
-            foreach (var atlasName in atlasesArray)
-            {
-                var spriteAtlases = Resources.Load<SpriteAtlas>(atlasName);
-                _atlases.Add(spriteAtlases);
-            
-                _spriteGroups.Add(atlasName, _atlases);
+                foreach (var result in loadPrefabs.Result)
+                {
+                    if (_groups.ContainsKey(groupName))
+                    {
+                        _groups[groupName].Add(result);
+                    }
+                    else
+                    {
+                        var objects = new List<Object>();
+                        objects.Add(result);
+                        _groups.Add(groupName, objects);
+                    }
+                }
             }
-            
             afterLoading?.Invoke();
-            return;
-            
-            var loadPrefabs = Addressables.LoadAssetsAsync<GameObject>(groupName.ToLower(), null);
-            await loadPrefabs.Task;
+        }
+        
+        public async void LoadSpriteAtlasGroups(string[] groupsName, Action afterLoading)
+        {
+            foreach (var groupName in groupsName)
+            {
+                var loadAtlases = Addressables.LoadAssetsAsync<SpriteAtlas>(groupName.ToLower(), null);
+                await loadAtlases.Task;
 
-            foreach (var result in loadPrefabs.Result)
-            {
-                if (_groups.ContainsKey(groupName))
+                foreach (var loadAtlas in loadAtlases.Result)
                 {
-                    _groups[groupName].Add(result);
-                }
-                else
-                {
-                    var objects = new List<Object>();
-                    objects.Add(result);
-                    _groups.Add(groupName, objects);
+                    if (_spriteGroups.ContainsKey(groupName))
+                    {
+                        _spriteGroups[groupName].Add(loadAtlas);
+                    }
+                    else
+                    {
+                        var atlases = new List<SpriteAtlas>();
+                        atlases.Add(loadAtlas);
+                        _spriteGroups.Add(groupName, atlases);
+                    }
                 }
             }
 
-            var loadAtlases = Addressables.LoadAssetsAsync<SpriteAtlas>(groupName.ToLower(), null);
-            await loadAtlases.Task;
-            
-            if (loadPrefabs.PercentComplete < 50)
-            {
-                _progress.Value = 50;
-            }
-            else
-            {
-                _progress.Value = loadAtlases.PercentComplete;
-            }
-            
-            foreach (var loadAtlas in loadAtlases.Result)
-            {
-                if (_spriteGroups.ContainsKey(groupName))
-                {
-                    _spriteGroups[groupName].Add(loadAtlas);
-                }
-                else
-                {
-                    var atlases = new List<SpriteAtlas>();
-                    atlases.Add(loadAtlas);
-                    _spriteGroups.Add(groupName, atlases);
-                }
-            }
-            
             afterLoading?.Invoke();
         }
         
         public T GetPrefab<T>(string name) where T : Component
         {
-            // if (_prefabs.TryGetValue(name, out var value))
-            // {
-            //     return (T)value;
-            // }
-            
-            var prefab = Resources.Load<T>(name);
-            
-            // _prefabs.Add(name, prefab);
-            
-            return prefab;
-            
-            
+            if (_prefabs.TryGetValue(name, out var value))
+            {
+                return (T)value;
+            }
             
             foreach (var gGroup in _groups)
             {
@@ -146,22 +120,10 @@ namespace HoneyWood.Scripts.ClientServices
                     var correctSprite = atlases.GetSprite(name);
                     if (correctSprite != null)
                     {
-                        _sprites.Add(name, correctSprite);
                         return correctSprite;
                     }
                 }
             }
-            // foreach (var spriteAtlas in _spriteGroups)
-            // {
-            //     foreach (var atlases in spriteAtlas.Value)
-            //     {
-            //         var correctSprite = atlases.GetSprite(name);
-            //         if (correctSprite != null)
-            //         {
-            //             return correctSprite;
-            //         }
-            //     }
-            // }
 
             return null;
         }
